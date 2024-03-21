@@ -249,6 +249,9 @@ information about the link. Some examples of attributes are: content type
 
 ## Task 4
 
+To complete tasks 4 and 5 of this exercise, please note that the server and main
+files are located within the [.app](.app/) folder.
+
 Use the information from the `/.well-known/core` to find resources exposing
 temperature and humidity readings of the room.
 
