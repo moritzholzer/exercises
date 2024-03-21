@@ -33,17 +33,17 @@ $ make all flash term
 **The response should be similar to:**
 ```
 2022-03-30 13:51:14,836 # ifconfig
-2022-03-30 13:51:14,840 # Iface  6  HWaddr: 3E:66  Channel: 26  NID: 0x23 
-2022-03-30 13:51:14,844 #           Long HWaddr: 5F:0F:7B:9D:AE:49:3E:E6 
-2022-03-30 13:51:14,848 #            TX-Power: 0dBm  State: IDLE 
-2022-03-30 13:51:14,851 #           AUTOACK  ACK_REQ  AUTOCCA  
-2022-03-30 13:51:14,856 #           L2-PDU:102  MTU:1280  HL:64  6LO  IPHC  
+2022-03-30 13:51:14,840 # Iface  6  HWaddr: 3E:66  Channel: 26  NID: 0x23
+2022-03-30 13:51:14,844 #           Long HWaddr: 5F:0F:7B:9D:AE:49:3E:E6
+2022-03-30 13:51:14,848 #            TX-Power: 0dBm  State: IDLE
+2022-03-30 13:51:14,851 #           AUTOACK  ACK_REQ  AUTOCCA
+2022-03-30 13:51:14,856 #           L2-PDU:102  MTU:1280  HL:64  6LO  IPHC
 2022-03-30 13:51:14,859 #           Source address length: 8
 2022-03-30 13:51:14,862 #           Link type: wireless
 2022-03-30 13:51:14,867 #           inet6 addr: fe80::5d0f:7b9d:ae49:3ee6  scope: link  VAL
 2022-03-30 13:51:14,874 #           inet6 addr: 2001:db8::5d0f:7b9d:ae49:3ee6  scope: global  VAL
 2022-03-30 13:51:14,876 #           inet6 group: ff02::1
-2022-03-30 13:51:14,877 #   
+2022-03-30 13:51:14,877 #
 ```
 
 **You should see one wireless interface.**
@@ -224,7 +224,7 @@ on.
 express web linking for constrained nodes. It is usually utilized for resource
 discovery (e.g. via the `/.well-known/core` resource or a resource directory).
 
-Let's see an example of a link format response (the line breaks are included 
+Let's see an example of a link format response (the line breaks are included
 for clarity):
 
 ```
