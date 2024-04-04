@@ -222,7 +222,7 @@ on.
 express web linking for constrained nodes. It is usually utilized for resource
 discovery (e.g. via the `/.well-known/core` resource or a resource directory).
 
-Let's see an example of a link format response (the line breaks are included 
+Let's see an example of a link format response (the line breaks are included
 for clarity):
 
 ```
@@ -246,6 +246,9 @@ information about the link. Some examples of attributes are: content type
 ![](diagram.jpg)
 
 ## Task 4
+
+To complete tasks 4 and 5 of this exercise, please note that the server and main
+files are located within the [.app](.app/) folder.
 
 Use the information from the `/.well-known/core` to find resources exposing
 temperature and humidity readings of the room.
