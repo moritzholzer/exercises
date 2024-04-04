@@ -26,6 +26,7 @@
 #include "od.h"
 #include "shell.h"
 #include "thread.h"
+#include "ztimer.h"
 
 #define MSG_QUEUE_SIZE  8
 
@@ -39,6 +40,9 @@ int main(void)
 {
     msg_t msg_queue[MSG_QUEUE_SIZE];
     msg_init_queue(msg_queue, MSG_QUEUE_SIZE);
+
+    /* Sleep so that we do not miss this message while connecting */
+    ztimer_sleep(ZTIMER_SEC, 3);
 
     puts("NETAPI example.\n");
 
