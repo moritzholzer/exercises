@@ -12,6 +12,10 @@ USEMODULE += saul
 # include and auto-initialize all available sensors
 USEMODULE += saul_default
 
+# Some workarounds are needed in order to get the tutorial running on
+# some computers.
+-include ../lab_workarounds.mk
+
 # we use ztimer to read sensors periodically
 USEMODULE += ztimer
 USEMODULE += ztimer_msec

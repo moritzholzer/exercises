@@ -17,6 +17,8 @@
 
 int main(void)
 {
+    /* Sleep so that we do not miss this message while connecting */
+    ztimer_sleep(ZTIMER_MSEC, 3000);
     puts("SAUL example application");
 
     /* start by finding a temperature sensor in the system */

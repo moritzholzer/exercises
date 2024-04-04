@@ -22,6 +22,9 @@ void message_callback(void *argument)
 
 int main(void)
 {
+    /* Sleep so that we do not miss this message while connecting */
+    ztimer_sleep(ZTIMER_SEC, 3);
+
     puts("This is a timers example");
 
     /* we can configure an event to occur in the future by setting a timer */

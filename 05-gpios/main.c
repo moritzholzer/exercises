@@ -21,6 +21,8 @@
 
 int main(void)
 {
+    /* Sleep so that we do not miss this message while connecting */
+    ztimer_sleep(ZTIMER_MSEC, 3000);
     puts("GPIOs example.");
 
     /* [TASK 1: initialize and use led0 here] */

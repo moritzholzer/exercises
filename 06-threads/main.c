@@ -16,6 +16,8 @@
 
 int main(void)
 {
+    /* Sleep so that we do not miss this message while connecting */
+    ztimer_sleep(ZTIMER_MSEC, 3000);
     puts("Threads example");
 
     thread_t * this_thread = thread_get_active();
