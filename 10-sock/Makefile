@@ -41,6 +41,10 @@ USEMODULE += shell_cmds_default
 # development process:
 DEVELHELP ?= 1
 
+# Some workarounds are needed in order to get the tutorial running on
+# some computers.
+-include ../lab_workarounds.mk
+
 # Change this to 0 show compiler invocation lines by default:
 QUIET ?= 1
 
