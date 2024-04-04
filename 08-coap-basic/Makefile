@@ -2,7 +2,7 @@
 APPLICATION = coap-example
 
 # If no BOARD is found in the environment, use this default:
-BOARD ?= pba-d-01-kw2x
+BOARD ?= feather-nrf52840-sense
 
 # This has to be the absolute path to the RIOT base directory:
 RIOTBASE ?= $(CURDIR)/../RIOT
@@ -43,6 +43,13 @@ USEMODULE += ps
 # which is not needed in a production environment but helps in the
 # development process:
 DEVELHELP ?= 1
+
+# Some workarounds are needed in order to get the tutorial running on
+# some computers.
+-include ../lab_workarounds.mk
+
+# We need a larger buffer in order to send some commands without truncation.
+CFLAGS += -DSTDIO_RX_BUFSIZE=128
 
 # The default size of GCOAP_PDU_BUF_SIZE can be too small for the response
 # from the RD server. Use a larger value if the client drops response packet

@@ -1,7 +1,7 @@
 APPLICATION = saul_example
 
 # If no BOARD is found in the environment, use this default:
-BOARD ?= pba-d-01-kw2x
+BOARD ?= feather-nrf52840-sense
 
 # This has to be the absolute path to the RIOT base directory:
 RIOTBASE ?= $(CURDIR)/../RIOT
@@ -11,6 +11,10 @@ USEMODULE += saul
 
 # include and auto-initialize all available sensors
 USEMODULE += saul_default
+
+# Some workarounds are needed in order to get the tutorial running on
+# some computers.
+-include ../lab_workarounds.mk
 
 # we use ztimer to read sensors periodically
 USEMODULE += ztimer
