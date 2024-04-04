@@ -22,11 +22,14 @@ void message_callback(void *argument)
 
 int main(void)
 {
+    /* Sleep so that we do not miss this message while connecting */
+    ztimer_sleep(ZTIMER_SEC, 3);
+
     puts("This is a timers example");
 
     /* we can configure an event to occur in the future by setting a timer */
     ztimer_t timeout;                     /* create a new timer */
-    timeout.callback = message_callback; /* set the function to execute */
+    timeout.callback = message_callback;  /* set the function to execute */
     timeout.arg = "Timeout!";             /* set the argument that the function will receive */
     ztimer_set(ZTIMER_SEC, &timeout, 2);  /* set the timer to trigger in 2 seconds */
 

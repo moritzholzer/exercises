@@ -30,6 +30,8 @@ void button_callback(void *arg)
 
 int main(void)
 {
+    /* Sleep so that we do not miss this message while connecting */
+    ztimer_sleep(ZTIMER_MSEC, 3000);
     puts("Threads and event queue example.");
 
     /* Setup button callback */

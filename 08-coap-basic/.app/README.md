@@ -5,8 +5,17 @@ humidity.
 
 **Note**: For both tasks set a border router and make sure that everyone is
 getting a global IP address.
+This can be done by flashing the `examples/gnrc_border_router` with:
+```
+UPLINK=cdc-ecm \
+PREFIX_CONF=auto_subnets \
+BOARD=feather-nrf52840-sense \
+PORT=/dev/ttyACM0 \
+make flash term
+```
+You may use `DEBUG_ADAPTER_ID` if multiple boards are plugged in.
 
-In addition to the border router, flash two `pba-d-01-kw2x` nodes, one with task
+In addition to the border router, flash two `feather-nrf52840-sense` nodes, one with task
 4 application and one with task 5. You can select which application you are
 building in the Makefile.
 
@@ -38,7 +47,7 @@ computer by pinging it:
 
 Use the shell to register to the resource directory:
 ```sh
-> cord_ep register [fd00:dead:beef::1]
+> cord_ep register coap://[fd00:dead:beef::1]
 ```
 
 **Potential pitfall**: when they are getting information from the lookup resource, make sure that
